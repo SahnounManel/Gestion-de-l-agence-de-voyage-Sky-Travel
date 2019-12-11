@@ -6,3 +6,4 @@ GtkWidget* create_ajouterdevis (void);
 GtkWidget* create_wind2 (void);
 GtkWidget* create_wind3 (void);
 GtkWidget* create_wind10 (void);
+GtkWidget* create_wind11 (void);

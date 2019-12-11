@@ -23,6 +23,7 @@ GtkWidget *input5;
 GtkWidget *input6;
 GtkWidget *input7;
 GtkWidget *ajouterdevis;
+//GtkWidget *Comboboxpromo=lookup_widget(GTK_WIDGET(button), "comboboxpromo"); //comboooooo
 ajouterdevis=lookup_widget(objet,"ajouterdevis");
 input1=lookup_widget(objet,"entry200");
 strcpy(d.id_client,gtk_entry_get_text(GTK_ENTRY(input1)));
@@ -39,6 +40,7 @@ strcpy(d.code_promo,gtk_entry_get_text(GTK_ENTRY(input6)));
 input7=lookup_widget(objet,"entry206");
 strcpy(d.total,gtk_entry_get_text(GTK_ENTRY(input7)));
 
+//strcpy(d.code_promo,gtk_combo_box_get_active_text(GTK_COMBO_BOX(Comboboxpromo))); //comboooooooo
 
 ajouter_devis(d);
 
@@ -153,12 +155,13 @@ on_button211_clicked                   (GtkWidget       *objet,
                                         gpointer         user_data)
 {
 GtkWidget *wind3;
-GtkWidget *wind2;
+GtkWidget *wind11;
+
 wind3=lookup_widget(objet,"wind3");
 gtk_widget_destroy(wind3);
-wind2=lookup_widget(objet,"wind2");
-wind2=create_wind2();
-gtk_widget_show(wind2);
+wind11=lookup_widget(objet,"wind11");
+wind11=create_wind11();
+gtk_widget_show(wind11);
 
 }
 
@@ -167,45 +170,80 @@ void
 on_button210_clicked                   (GtkWidget       *objet,
                                         gpointer         user_data)
 {
-GtkWidget *ajouterdevis;
+GtkWidget *wind11;
 GtkWidget *wind2;
 wind2=lookup_widget(objet,"wind2");
 gtk_widget_destroy(wind2);
-ajouterdevis=lookup_widget(objet,"ajouterdevis");
-ajouterdevis=create_ajouterdevis();
-gtk_widget_show(ajouterdevis);
+wind11=lookup_widget(objet,"wind11");
+wind11=create_wind11();
+gtk_widget_show(wind11);
 }
 
 
+
+
+
+
+
+
 void
-on_buttonfactures_clicked              (GtkWidget       *objet,
+on_buttonfacturesa_clicked             (GtkWidget       *objet,
                                         gpointer         user_data)
-{
-GtkWidget *wind2;
+{GtkWidget *wind11;
 GtkWidget *wind10;
 GtkWidget *treeviewf;
-wind2=lookup_widget(objet,"wind2");
-gtk_widget_destroy(wind2);
+wind11=lookup_widget(objet,"wind11");
+gtk_widget_destroy(wind11);
 wind10=lookup_widget(objet,"wind10");
 wind10=create_wind10();
 gtk_widget_show(wind10);
 treeviewf=lookup_widget(wind10,"treeviewf");
 afficher_facture(treeviewf);
+
 }
 
 
 void
-on_retourwind2_clicked                 (GtkWidget       *objet,
+on_buttondevisa_clicked                (GtkWidget       *objet,
                                         gpointer         user_data)
 {GtkWidget *wind2;
-GtkWidget *wind10;
+GtkWidget *wind11;
 GtkWidget *treeview200;
-wind10=lookup_widget(objet,"wind10");
-gtk_widget_destroy(wind10);
+wind11=lookup_widget(objet,"wind11");
+gtk_widget_destroy(wind11);
 wind2=lookup_widget(objet,"wind2");
 wind2=create_wind2();
 gtk_widget_show(wind2);
-treeview200=lookup_widget(wind10,"treeview200");
+treeview200=lookup_widget(wind2,"treeview200");
 afficher_devis(treeview200);
+
+}
+
+
+void
+on_retourwind11facture_clicked         (GtkWidget       *objet,
+                                        gpointer         user_data)
+{
+GtkWidget *wind10;
+GtkWidget *wind11;
+wind10=lookup_widget(objet,"wind10");
+gtk_widget_destroy(wind10);
+wind11=lookup_widget(objet,"wind11");
+wind11=create_wind11();
+gtk_widget_show(wind11);
+}
+
+
+void
+on_buttonajoutdevis_clicked            (GtkWidget       *objet,
+                                        gpointer         user_data)
+{
+GtkWidget *wind2;
+GtkWidget *ajouterdevis;
+wind2=lookup_widget(objet,"wind2");
+gtk_widget_destroy(wind2);
+ajouterdevis=lookup_widget(objet,"ajouterdevis");
+ajouterdevis=create_ajouterdevis();
+gtk_widget_show(ajouterdevis);
 }
 

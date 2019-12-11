@@ -41,10 +41,21 @@ void
 on_button210_clicked                   (GtkWidget       *objet,
                                         gpointer         user_data);
 
+
+
+
 void
-on_buttonfactures_clicked              (GtkWidget       *objet,
+on_buttonfacturesa_clicked             (GtkWidget       *objet,
                                         gpointer         user_data);
 
 void
-on_retourwind2_clicked                 (GtkWidget       *objet,
+on_buttondevisa_clicked                (GtkWidget       *objet,
+                                        gpointer         user_data);
+
+void
+on_retourwind11facture_clicked         (GtkWidget       *objet,
+                                        gpointer         user_data);
+
+void
+on_buttonajoutdevis_clicked            (GtkWidget       *objet,
                                         gpointer         user_data);
