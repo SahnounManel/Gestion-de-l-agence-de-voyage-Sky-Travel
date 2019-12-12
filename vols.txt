@@ -1,0 +1,5 @@
+qsd Tunisie Allmagne firstClass Nouvelair 14/12/2019 14/12/2019 1 20
+zer Tunisie Marroc firstClass Tunisair 1/12/2019 29/12/2019 2 20
+54 Tunisie Marroc ClassEconomique Tunisair 1/12/2019 22/12/2019 5 1200
+KHV Algerie Algerie ClassEconomique Tunisair 4/12/2019 2/12/2019 37 215
+000 Marroc Algerie ClassEconomique Nouvelair 11/12/2019 11/12/2019 50 922
